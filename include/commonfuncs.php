@@ -5,7 +5,7 @@
 * By Ando Saabas          ando(a t)cs.ioc.ee
 ********************************************/
 
-	header('Content-Type: text/html; charset=iso-8859-1');
+	#header('Content-Type: text/html; charset=iso-8859-1');
 
 	$includes = array('./include', 'include', '../search/include', '/var/www/search/include');
 
