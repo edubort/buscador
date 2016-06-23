@@ -295,6 +295,10 @@ figure{
 	margin: 0;
 }
 
+ul li{
+	margin: 0;
+}
+
 .padd-1-x{
 	padding-left: .5em;
 	padding-right: .5em;
