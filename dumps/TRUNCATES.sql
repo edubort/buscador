@@ -1,0 +1,33 @@
+SET foreign_key_checks =0 ;
+
+truncate table domains;
+truncate table domains_sites;
+truncate table fila_index;
+truncate table keywords;
+truncate table link_keyword;
+truncate table link_keyword0;
+truncate table link_keyword1;
+truncate table link_keyword2;
+truncate table link_keyword3;
+truncate table link_keyword4;
+truncate table link_keyword5;
+truncate table link_keyword6;
+truncate table link_keyword7;
+truncate table link_keyword8;
+truncate table link_keyword9;
+truncate table link_keyworda;
+truncate table link_keywordb;
+truncate table link_keywordc;
+truncate table link_keywordd;
+truncate table link_keyworde;
+truncate table link_keywordf;
+truncate table links;
+truncate table log_index;
+truncate table pending;
+truncate table query_log;
+truncate table site_category;
+truncate table sites;
+truncate table site_file_connector;
+truncate table temp;
+
+SET foreign_key_checks =1;
