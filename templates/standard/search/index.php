@@ -1,0 +1,126 @@
+@template('modelos/buscas/padrao');
+
+@section('titulo')
+	Busca
+@stop
+
+@section('meio')
+	<?php //$objFileUtils->incluir('templates\standard\search\barraBusca.php'); ?>
+	
+	<!-- MODAL -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Opções de busca</h4>
+			</div>
+			
+			<div class="modal-body">
+				  <b>Opções disponíveis:</b>
+				  <br>
+					<?php
+					  if($_REQUEST['type'] == "and") {
+						$checkOR = "";
+						$checkAND = "checked";
+						$checkPH = "";
+					  } elseif($_REQUEST['type'] == "phrase") {
+						$checkOR = "";
+						$checkAND = "";
+						$checkPH = "checked";
+					  } else {
+						$checkOR = "checked";
+						$checkAND = "";
+						$checkPH = "";
+					  }
+					?>
+					<!--<input type="radio" name="type" value="or" <?php print $_REQUEST['type']=='or'?'checked':$checkedOR?>><?php print $sph_messages['orSearch']?></td></tr>-->
+					<input type="radio" name="type" value="or" <?php print $type=='or'?'checked':$checkedOR?>>Busca aberta (Termo 1 "OU" Termo 2 "OU" Termo N)<BR>
+					<!--<input type="radio" name="type" value="and" <?php print $type=='and'?'checked':$checkedAND?>><?php print $sph_messages['andSearch']?></td>-->
+					<input type="radio" name="type" value="and" <?php print $_REQUEST['type']=='and'?'checked':$checkedAND?>>Busca exata (Termo 1 "E" Termo 2 "E" Termo N)<BR>
+					<!--<input type="radio" name="type" value="phrase" <?php print $_REQUEST['type']=='phrase'?'checked':$checkedPH?>><?php print $sph_messages['phraseSearch']?></td>-->
+					<input type="radio" name="type" value="phrase" <?php print $_REQUEST['type']=='phrase'?'checked':$checkedPH?>>Busca por frase<BR>
+					<br>
+					
+					<p>
+					<b>Resultados por página</b>
+					<select name='results'>
+					  <option <?php  if ($results_per_page==10) echo "selected";?>>10</option>
+					  <option <?php  if ($results_per_page==20) echo "selected";?>>20</option>
+					  <option <?php  if ($results_per_page==50) echo "selected";?>>50</option>
+					  <option <?php  if ($results_per_page==100) echo "selected";?>>100</option>
+					</select>
+					
+					<?php print $sph_messages['resultsPerPage']?>   
+					</p>
+			</div>
+			
+			<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+		
+		</div>
+	</div>
+	<!-- FINAL MODAL -->
+  
+  
+	<header id="main-header" class="wd-100 padd-05 bg-gray conteudo-meio">
+			<figure class="wd-10 conteudo-centro">
+				<img src="{{url('/img/logo.png')}}" alt="Logo">
+			</figure>
+			
+			<form action="search.php" method="get">
+				<div class="col-md-8">
+					<section name="searchBar" class="wd-100">
+						<div id="custom-search-input">
+							<div class="input-group col-md-12">
+								<input type="text" class="form-control input-md" name="query" id="query" value="<?php print quote_replace($query);?>" action="include/js_suggest/suggest.php"/>
+								<span class="input-group-btn">
+									<button class="btn btn-info btn-md" type="submit">
+										<?php echo $sph_messages['Search']; ?>
+									</button>
+								</span>
+							</div>
+						</div>
+					</section>
+					
+					<a href="#" data-toggle="modal" data-target="#myModal">Opções de busca</a>
+					</nav>
+				</div>
+				
+				<br>
+				<?php if ($catid<>0){ ?>
+					<center><b><?php print $sph_messages['Search']?></b>: <input type="radio" name="category" value="<?php print $catid?>"><?php print $sph_messages['Only in category']?> "<?php print $tpl_['category'][0]['category']?>'" <input type="radio" name="category" value="-1" checked><?php print $sph_messages['All sites']?></center>
+				<?php }?>
+				
+				<input type="hidden" name="search" value="1">
+			</form>
+	</header>
+	
+	<?php if ($has_categories && $search==1 && $show_categories){?>
+	<section name="opcoes" class="col-md-12 color-light-blue padd-1" id="barra-opcoes">
+		<div class="col-md-10">
+			<a href="search.php"><?php print $sph_messages['Categories']?></a>
+		</div>
+	</section>
+	<?php }?>
+	
+	<div class="col-md-12 conteudo-centro">
+		<article name="container_conteudo" class="col-md-10 conteudo-meio">
+			
+			<section name="resultados_busca" class="padd-2-y">
+				<!-- CONTEUDO BUSCA -->
+					<?php echo $objConteudoBusca; ?>
+				<!-- FIM CONTEUDO BUSCA -->
+			</section>
+		</article>
+	</div>
+
+@stop
+
+@section('footer')
+
+@stop

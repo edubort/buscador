@@ -1,0 +1,11 @@
+@template('modelos\buscas\padrao.php');
+
+<img src="img/logo.png" border=0>
+<form action="search.php" method="get">
+
+<input class="searchBar" type="text" name="query" id="query" size="40" value="<?php   print quote_replace($query);?>" action="include/js_suggest/suggest.php" columns="2" autocomplete="off" delay="1500">
+<input class="searchButton" type="submit" value="<?php print $sph_messages['Search']?>">
+
+<div id="divOpBusca" class="divOpBusca">
+  <a href="#" onClick="$('#DivAdvancedSearch').show()">Opções de busca</a>
+</div>
