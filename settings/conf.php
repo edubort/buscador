@@ -3,10 +3,20 @@
  Sphider configuration file
 ***********************/
 
-
 /*********************** 
 General settings 
 ***********************/
+
+require_once('Core/Functions.php');
+
+if(SHOW_ALL_ERRORS == true)
+{
+	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+	ini_set('display_errors', 1);
+}
+else{
+	error_reporting(0);	
+}
 
 // Sphider version 
 $version_nr			= '1.3.5';
@@ -176,4 +186,5 @@ $domain_weight = 60;
 $path_weight	= 10;
 
 // Relative weight of a word in meta_keywords
-$meta_weight	= 5;?>
+$meta_weight	= 5;
+?>
