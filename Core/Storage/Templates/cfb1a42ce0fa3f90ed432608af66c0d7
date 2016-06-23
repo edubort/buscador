@@ -86,30 +86,36 @@
   
   
 	<header id="main-header" class="wd-100 padd-05 bg-gray conteudo-meio">
-		
 			<figure class="wd-10 conteudo-centro">
 				<img src="http://localhost:8087/img/logo.png" alt="Logo">
 			</figure>
 			
-			<form action="search.php" method="get">
-				<div class="col-md-8">
+			<form action="search.php" method="get" class="conteudo-meio">
+				<div class="col-md-6">
 					<section name="searchBar" class="wd-100">
 						<div id="custom-search-input">
 							<div class="input-group col-md-12">
 								<input type="text" class="form-control input-md" name="query" id="query" value="<?php print quote_replace($query);?>" action="include/js_suggest/suggest.php"/>
 								<span class="input-group-btn">
 									<button class="btn btn-info btn-md" type="submit">
-										<?php echo $sph_messages['Search']; ?>
+										<?php //echo $sph_messages['Search']; ?>
+										<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 									</button>
 								</span>
 							</div>
 						</div>
 					</section>
-					
-					<a href="#" data-toggle="modal" data-target="#myModal">Opções de busca</a>
-					</nav>
 				</div>
 				
+				<div class="col-md-6 conteudo-final">
+					<nav>
+						<ul>
+							<li>
+								<a href="#" data-toggle="modal" data-target="#myModal">Opções de busca</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 				<br>
 				<?php if ($catid<>0){ ?>
 					<center><b><?php print $sph_messages['Search']?></b>: <input type="radio" name="category" value="<?php print $catid?>"><?php print $sph_messages['Only in category']?> "<?php print $tpl_['category'][0]['category']?>'" <input type="radio" name="category" value="-1" checked><?php print $sph_messages['All sites']?></center>
