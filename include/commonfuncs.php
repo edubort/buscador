@@ -7,8 +7,10 @@
 
 	header('Content-Type: text/html; charset=iso-8859-1');
 
-	$includes = array('./include', 'include', '../include');
+	$includes = array('./include', 'include', '../include', '/var/www/search/include');
+
 	if( !in_array($include_dir, $includes) )  {
+		
        die("Illegal include.");
 	} 
 
