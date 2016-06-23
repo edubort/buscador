@@ -2,8 +2,8 @@
   $database="searchin";
   $mysql_user = "admin";
   $mysql_password = "admin";
-  $mysql_host = "192.168.56.1";
-  #$mysql_host = "192.168.33.117";
+  #$mysql_host = "192.168.56.1";
+  $mysql_host = "192.168.33.117";
   #$mysql_host = "127.0.0.1";
   $mysql_table_prefix = "";
 

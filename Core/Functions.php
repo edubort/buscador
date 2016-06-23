@@ -2,8 +2,10 @@
 	define('STORAGE_TEMPLATES', 'Core/Storage/Templates/');
 	define('TEMPLATES', 'templates/');
 	define('ROTA_APELIDO', '');
-	define('SHOW_ALL_ERRORS', false);
+	define('SHOW_ALL_ERRORS', true);
 
+
+echo 1;
 	/*
 	*@description carrega sozinho o arquivo quando é instanciado uma classe
 	*@ex: $obj = new \Utils\Teste(); faz: require(Utils\Teste.php)

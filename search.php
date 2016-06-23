@@ -166,7 +166,7 @@ if ($count_level0) {
 		break;
 	}
 	
-	$objTemplateUtils->loadView('templates/standard/search/index.php', 
+	$objTemplateUtils->loadView('/standard/search/index.php', 
 	[
 		'query' => $query,
 		'sph_messages' => $sph_messages,

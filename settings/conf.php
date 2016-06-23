@@ -11,6 +11,7 @@ General settings
 if($intAdmin !== 1) {
 
 	require_once('Core/Functions.php');
+
 }
 
 
