@@ -8,6 +8,8 @@
  * @email:  edubort@live.com
  */
 
+
+
  function getmicrotime(){
     list($usec, $sec) = explode(" ",microtime());
     return ((float)$usec + (float)$sec);
@@ -30,6 +32,7 @@ function saveToLog ($query, $elapsed, $results) {
 
 $include_dir = "./include"; 
 include ("$include_dir/commonfuncs.php");
+
 //extract(getHttpVars());
 
 if (isset($_GET['query']))
@@ -64,6 +67,10 @@ require_once("$language_dir/en-language.php");
 require_once("$include_dir/searchfuncs.php");
 require_once("$include_dir/categoryfuncs.php");
 
+
+require "./Utils/TemplateUtils.php";
+require "./Utils/FileUtils.php";
+
 use Utils\TemplateUtils;
 use Utils\FileUtils;
 
@@ -72,6 +79,10 @@ $objTemplateUtils = new TemplateUtils();
 
 //include "$template_dir/$template/header.html";
 include "$language_dir/$language-language.php";
+
+
+
+
 
 if ($type != "or" && $type != "and" && $type != "phrase") { 
 	#$type = "and";
@@ -130,15 +141,17 @@ if ($count_level0) {
 		break;
 		
 		default:
+
 			if ($show_categories)
 			{
+
 				if ($_REQUEST['catid']  && is_numeric($catid)){
 					$cat_info = get_category_info($catid);
 				}else{
 					$cat_info = get_categories_view();
 				}
 				
-				$objConteudoBusca = $objFileUtils->incluir('templates\standard\search\categories.php',
+				$objConteudoBusca = $objFileUtils->incluir('templates/standard/search/categories.php',
 				[
 					'catid' => $catid,
 					'cat_info' => $cat_info,
@@ -147,12 +160,13 @@ if ($count_level0) {
 					'cat_info' => $cat_info,
 					'cat_info' => $cat_info,
 				]);
+
 				//require("$template_dir/$template/categories.html");
 			}
 		break;
 	}
 	
-	$objTemplateUtils->loadView('standard/search/index.php', 
+	$objTemplateUtils->loadView('templates/standard/search/index.php', 
 	[
 		'query' => $query,
 		'sph_messages' => $sph_messages,
@@ -164,6 +178,7 @@ if ($count_level0) {
 		'show_categories' => $show_categories,
 		'objConteudoBusca' => $objConteudoBusca
 	]);
+
 
 //include "$template_dir/$template/footer.html";
 ?>
