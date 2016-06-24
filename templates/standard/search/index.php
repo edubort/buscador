@@ -89,7 +89,8 @@
 					</section>
 				</div>
 				
-				<div class="col-md-6 conteudo-final">
+				<!-- <div class="col-md-6 conteudo-final"> -->
+				<div class="col-md-6" id="div_opcoes_busca">
 					<nav>
 						<ul>
 							<li>
@@ -116,12 +117,18 @@
 	<?php }?>
 	
 	<div class="col-md-12 conteudo-centro">
-		<article name="container_conteudo" class="col-md-12 conteudo-meio">
+		<article name="container_conteudo" class="col-md-12">
 			
-			<section name="resultados_busca" class="padd-2-y">
+			<section name="resultados_busca" class="col-md-6 ">
 				<!-- CONTEUDO BUSCA -->
 					<?php echo $objConteudoBusca; ?>
 				<!-- FIM CONTEUDO BUSCA -->
+			</section>
+			
+			<section name="secao_da_direita" class="col-md-6 ">
+				<!-- CONTEUDO DA SEÇÃO DIREITA -->
+					 
+				<!-- FIM CONTEUDO DA SEÇÃO DIREITA -->
 			</section>
 		</article>
 	</div>

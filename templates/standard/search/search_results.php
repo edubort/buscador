@@ -138,7 +138,7 @@ extract($search_results);
 <?php }?>
 
 <!-- links to other result pages-->
-<?php if (isset($other_pages)) {
+<?php if (isset($other_pages)){
 	if ($adv==1) {
 		$adv_qry = "&adv=1";
 	}

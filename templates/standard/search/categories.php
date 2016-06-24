@@ -18,7 +18,7 @@
 		<?php  }?>
 	<?php  }?>
 		
-		
+		 
 	<!-- list of category web pages -->
 	<?php if ($cat_info['cat_sites']){?>
 		<div class="webPageBanner"><?php print $sph_messages['Web pages']?></div><br/>

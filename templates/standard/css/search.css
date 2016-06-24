@@ -29,7 +29,7 @@ a:visited{color:#5555AA}
 /*hr{color:#000066}*/
 
 /*Page descriptions*/
-.description{font-size: 13px;}
+.description{font-size: 13px; text-align: justify;}
 
 /* */
 td {font-family:arial,sans-serif; font-size: 13px; }
@@ -213,8 +213,8 @@ hr.powered{width:550; color: #000066}
 
 /*main results table */
 #results{
-  position: relative;
-  width: 700;
+  /*position: relative;*/
+  min-width: 700;
   left: 50px;
   top:30px;
 }
@@ -347,6 +347,15 @@ ul li{
 .conteudo-final{
 	display: flex;
 	justify-content: flex-end;
+}
+
+#div_opcoes_busca{
+	padding: 0; 
+}
+
+#div_opcoes_busca ul{
+	margin: 0;
+	padding: 0;
 }
 
 .conteudo-centro{
