@@ -1,9 +1,9 @@
 <?php
   $database="searchin";
-  $mysql_user = "root";
-  $mysql_password = "root";
+  $mysql_user = "admin";
+  $mysql_password = "admin";
   #$mysql_host = "192.168.56.1";
-  $mysql_host = "localhost";
+  $mysql_host = "192.168.33.117";
   #$mysql_host = "127.0.0.1";
   $mysql_table_prefix = "";
 
@@ -11,7 +11,7 @@
   if (!$con)
     die ("<b>Houve um problema ao tentar conectar-se com o banco de dados. Verifique sua conexão com o banco e tente novamente.</b>");
     $success = mysql_select_db ($database) or die(mysql_error());
-    mysql_set_charset('latin1', $con);
+    mysql_set_charset('utf8', $con);
   if (!$success){
     print "<b>Schema não selecionado ou não existente.";
     die();

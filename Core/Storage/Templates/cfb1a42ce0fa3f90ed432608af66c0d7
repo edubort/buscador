@@ -87,7 +87,7 @@
   
 	<header id="main-header" class="wd-100 padd-05 bg-gray conteudo-meio">
 			<figure class="wd-10 conteudo-centro">
-				<img src="http://localhost:8087/img/logo.png" alt="Logo">
+				<img src="http://searchindex/img/logo.png" alt="Logo">
 			</figure>
 			
 			<form action="search.php" method="get" class="conteudo-meio">
