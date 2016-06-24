@@ -28,7 +28,7 @@ extract($search_results);
 <?php if ($search_results['total_results']==0){?>
 	<div id ="result_report" align="center">
 		<?php 
-    $strNoMatch = "<h3>O termo pesquisado (\"%query\") n„o encontrou resultados.</h3>";
+    $strNoMatch = "<h3>O termo pesquisado (\"%query\") n√£o encontrou resultados.</h3>";
 		$msg = str_replace ('%query', $ent_query, $strNoMatch);
 		echo $msg;
 		?>
@@ -125,7 +125,7 @@ extract($search_results);
       <?php }?>
       <a href="<?php echo $strPasta; ?>">Abrir pasta de origem</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <b>Relev‚ncia: </b> <?php echo $weight; ?>
+      <b>Relev√¢ncia: </b> <?php echo $weight; ?>
       <br/>
       <br/>
 
@@ -147,7 +147,7 @@ extract($search_results);
 	}
 ?>
 	<div id="other_pages">
-	<?php print $sph_messages["Result page"]?>:
+	<?php echo $sph_messages["Result page"]; ?>:
 	<?php if ($start >1){?>
 				<a href="<?php print 'search.php?query='.quote_replace(addmarks($query)).'&start='.$prev.'&search=1&results='.$results_per_page.$type_qry.$adv_qry.'&domain='.$domain?>"><?php print $sph_messages['Previous']?></a>
 	<?php  }?>	

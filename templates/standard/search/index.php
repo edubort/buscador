@@ -15,11 +15,11 @@
 		<div class="modal-content">
 			<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			<h4 class="modal-title">Opções de busca</h4>
+			<h4 class="modal-title">OpÃ§Ãµes de busca</h4>
 			</div>
 			
 			<div class="modal-body">
-				  <b>Opções disponíveis:</b>
+				  <b>OpÃ§Ãµes disponÃ­veis:</b>
 				  <br>
 					<?php
 					  if($_REQUEST['type'] == "and") {
@@ -45,7 +45,7 @@
 					<br>
 					
 					<p>
-					<b>Resultados por página</b>
+					<b>Resultados por pÃ¡gina</b>
 					<select name='results'>
 					  <option <?php  if ($results_per_page==10) echo "selected";?>>10</option>
 					  <option <?php  if ($results_per_page==20) echo "selected";?>>20</option>
@@ -93,7 +93,7 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="#" data-toggle="modal" data-target="#myModal">Opções de busca</a>
+								<a href="#" data-toggle="modal" data-target="#myModal">OpÃ§Ãµes de busca</a>
 							</li>
 						</ul>
 					</nav>
@@ -116,7 +116,7 @@
 	<?php }?>
 	
 	<div class="col-md-12 conteudo-centro">
-		<article name="container_conteudo" class="col-md-10 conteudo-meio">
+		<article name="container_conteudo" class="col-md-12 conteudo-meio">
 			
 			<section name="resultados_busca" class="padd-2-y">
 				<!-- CONTEUDO BUSCA -->

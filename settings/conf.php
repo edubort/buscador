@@ -7,9 +7,11 @@
 General settings 
 ***********************/
 
+/*if($intAdmin !== 1) {
+	require_once('Core/Functions.php');
+}*/
 
-require_once('Core/Functions.php');
-
+require_once("Core/Functions.php");
 
 // Sphider version 
 $version_nr			= '1.3.5';
