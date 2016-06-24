@@ -5,11 +5,11 @@
 		<input class="searchButton" type="submit" value="<?php echo $sph_messages['Search']; ?>">
 
 		<div id="divOpBusca" class="divOpBusca">
-		  <a href="#" onClick="$('#DivAdvancedSearch').show()">Opções de busca</a>
+		  <a href="#" onClick="$('#DivAdvancedSearch').show()">OpÃ§Ãµes de busca</a>
 		</div>
 		
 		<div id="DivAdvancedSearch" class="advancedSearch">
-			<b>Opções disponíveis:</b>
+			<b>OpÃ§Ãµes disponÃ­veis:</b>
 		  <br>
 			<?php
 			  
@@ -34,7 +34,7 @@
 				<!--<input type="radio" name="type" value="phrase" <?php print $_REQUEST['type']=='phrase'?'checked':$checkedPH?>><?php print $sph_messages['phraseSearch']?></td>-->
 				<input type="radio" name="type" value="phrase" <?php print $_REQUEST['type']=='phrase'?'checked':$checkedPH?>>Busca por frase<BR>
 				<br>
-			<b>Resultados por página</b>
+			<b>Resultados por pÃ¡gina</b>
 					<select name='results'>
 					  <option <?php  if ($results_per_page==10) echo "selected";?>>10</option>
 					  <option <?php  if ($results_per_page==20) echo "selected";?>>20</option>
