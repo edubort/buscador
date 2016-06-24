@@ -13,12 +13,23 @@
 	*@ex: $obj = new \Utils\Teste(); faz: require(Utils\Teste.php)
 	*/
 	spl_autoload_register(function($str){
-
-		$str = preg_replace("/\\\/", "/", $str);
+		$str = normalizarCaminho($str);
 
 		if(file_exists($str . ".php"))
 			require_once($str . ".php");
 	});
+
+	function normalizarCaminho($strCaminho){
+		$strRegex = "/\\//";
+		$strReplace = "/";
+
+		if(PHP_OS == 'Linux'){
+			$strRegex = "/\\\/";
+			$strReplace = "/";
+		}
+		
+		return preg_replace($strRegex, $strReplace, $strCaminho);
+	}
 
 	/*
 	*@description Carrega a URL raiz do site + o passado

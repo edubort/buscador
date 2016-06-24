@@ -5,6 +5,8 @@
 	{
 		public function incluir($strArquivo, $arr = null)
 		{
+			$strArquivo = normalizarCaminho($strArquivo);
+
 			if(file_exists($strArquivo) == false)
 				die('Arquivo não existe: ' . $strArquivo);
 
