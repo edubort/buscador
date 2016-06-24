@@ -1,22 +1,35 @@
 <?php
+	//namespace Core;
+
 	define('STORAGE_TEMPLATES', 'Core/Storage/Templates/');
 	define('TEMPLATES', 'templates/');
 	define('ROTA_APELIDO', '');
-	define('SHOW_ALL_ERRORS', true);
+	define('SHOW_ALL_ERRORS', false);
 
+	use Utils\ResourceUtils;
 
-echo 1;
 	/*
 	*@description carrega sozinho o arquivo quando é instanciado uma classe
 	*@ex: $obj = new \Utils\Teste(); faz: require(Utils\Teste.php)
 	*/
-	function __autoload($str)
-	{
+	spl_autoload_register(function($str){
+		$str = normalizarCaminho($str);
+
 		if(file_exists($str . ".php"))
 			require_once($str . ".php");
-	}
+	});
 
-	use Utils\ResourceUtils;
+	function normalizarCaminho($strCaminho){
+		$strRegex = "/\\//";
+		$strReplace = "/";
+
+		if(PHP_OS == 'Linux'){
+			$strRegex = "/\\\/";
+			$strReplace = "/";
+		}
+		
+		return preg_replace($strRegex, $strReplace, $strCaminho);
+	}
 
 	/*
 	*@description Carrega a URL raiz do site + o passado
@@ -32,4 +45,13 @@ echo 1;
 			$strHost .= "/".$strApelidoRota;
 
 		return $strHost.$strParam;
+	}
+
+	if(SHOW_ALL_ERRORS == true)
+	{
+		error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+		ini_set('display_errors', 1);
+	}
+	else{
+		error_reporting(0);	
 	}

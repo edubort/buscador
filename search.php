@@ -8,8 +8,6 @@
  * @email:  edubort@live.com
  */
 
-
-
  function getmicrotime(){
     list($usec, $sec) = explode(" ",microtime());
     return ((float)$usec + (float)$sec);
@@ -55,7 +53,7 @@ if (isset($_GET['adv']))
 	$adv = $_GET['adv'];
 
 	
-$include_dir = "./include"; 
+$include_dir = "./include";
 $template_dir = "./templates"; 
 $settings_dir = "./settings"; 
 $language_dir = "./languages";
