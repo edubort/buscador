@@ -40,7 +40,8 @@
 			$arrRegex = [
 				//"url" => [ "regex" => "/(?:{{url\('*(\W*\w*\D*?)'*\)}})/", "function" => function($str){
 				"url" => [ "regex" => "/(?:{{url\('*(.*?)'*\)}})/", "function" => function($str){
-					return empty($str) ? url() : url($str);
+					return empty($str) ? \url() : 
+					\url($str);
 				}]
 			];
 

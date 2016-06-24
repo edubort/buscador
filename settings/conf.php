@@ -7,24 +7,11 @@
 General settings 
 ***********************/
 
-
-if($intAdmin !== 1) {
-
+/*if($intAdmin !== 1) {
 	require_once('Core/Functions.php');
+}*/
 
-}
-
-
-if(SHOW_ALL_ERRORS == true)
-{
-	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-	ini_set('display_errors', 1);
-}
-else{
-	error_reporting(0);	
-}
-
-
+require_once("Core/Functions.php");
 
 // Sphider version 
 $version_nr			= '1.3.5';
