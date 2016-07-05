@@ -118,18 +118,7 @@
 	
 	<div class="col-md-12 conteudo-centro">
 		<article name="container_conteudo" class="col-md-12">
-			
-			<section name="resultados_busca" class="col-md-6 ">
-				<!-- CONTEUDO BUSCA -->
-					<?php echo $objConteudoBusca; ?>
-				<!-- FIM CONTEUDO BUSCA -->
-			</section>
-			
-			<section name="secao_da_direita" class="col-md-6 ">
-				<!-- CONTEUDO DA SEÇÃO DIREITA -->
-					 
-				<!-- FIM CONTEUDO DA SEÇÃO DIREITA -->
-			</section>
+			<?php echo $objConteudoBusca; ?>
 		</article>
 	</div>
 

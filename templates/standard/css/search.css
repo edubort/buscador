@@ -21,6 +21,19 @@ a, a:hover {
   color: #4dabf8;
 }
 
+.bgAmareloClaro{
+  background: #fff9ed;
+}
+
+#anuncio-topo legend{
+  border: none;
+  font-size: 14px;
+}
+
+#anuncio-topo header a{
+  text-decoration: underline;
+}
+
 #barra-opcoes{
   box-shadow: 0 2px 5px -1px gray;
 }
@@ -284,9 +297,6 @@ h1 {
 
 }
 
-
-
-
 body{
 	margin: 0 auto;
 }
@@ -310,6 +320,14 @@ ul li{
 
 ul li{
   list-style: none;
+}
+
+.marg-bt-2{
+ margin-bottom: 2em;
+}
+
+.marg-bt-05{
+ margin-bottom: .5em;
 }
 
 .padd-2-y{
@@ -344,9 +362,19 @@ ul li{
 	display: flex;
 }
 
+.flex-coluna{
+  display: flex;
+  flex-direction: column;
+}
+
 .conteudo-final{
 	display: flex;
 	justify-content: flex-end;
+}
+
+.conteudo-between{
+  display: flex;
+  justify-content: space-between;
 }
 
 #div_opcoes_busca{
@@ -370,4 +398,12 @@ ul li{
 
 .bg-gray{
 	background: #f1f1f1;
+}
+
+.color-green{
+  color: #006621;
+}
+
+.font-1-2{
+  font-size: 1.2em;
 }

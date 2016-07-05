@@ -1,7 +1,7 @@
 <?php
   $database="searchin";
   $mysql_user = "root";
-  $mysql_password = "";
+  $mysql_password = "root";
   #$mysql_host = "192.168.56.1";
   $mysql_host = "localhost";
   #$mysql_host = "127.0.0.1";

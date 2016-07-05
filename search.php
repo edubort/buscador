@@ -163,7 +163,7 @@ if ($count_level0) {
 			}
 		break;
 	}
-	
+
 	$objTemplateUtils->loadView('/standard/search/index.php', 
 	[
 		'query' => $query,
@@ -176,7 +176,6 @@ if ($count_level0) {
 		'show_categories' => $show_categories,
 		'objConteudoBusca' => $objConteudoBusca
 	]);
-
 
 //include "$template_dir/$template/footer.html";
 ?>
